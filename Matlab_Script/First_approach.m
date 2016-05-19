@@ -37,13 +37,13 @@ data_detrend=iddata(Y0,U0,Ts,'InterSample','zoh') %detrended data set
 %--------------------------------------------------------------------------
 %DATA PROCESSING AND ANALYSIS ---> data splitting
 id=data_detrend(1:2817) %identification data
-figure; plot(id); grid
+figure; plot(id); grid; title('IDENTIFICATION DATA')
 
 cv=data_detrend(2818:5634) %cross-validation data
-figure; plot(cv); grid
+figure; plot(cv); grid; title('CROSS-VALIDATION DATA')
  
 v=data_detrend(5635:8451) %validation data
-figure; plot(v); grid
+figure; plot(v); grid; title('VALIDATION DATA')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %MODEL IDENTIFICATION

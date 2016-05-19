@@ -37,14 +37,14 @@ data_detrend=iddata(Y0,U0,Ts,'InterSample','zoh') %detrended data set
 %--------------------------------------------------------------------------
 %DATA PROCESSING AND ANALYSIS ---> data splitting
 id=data_detrend(401:1900) %identification data
-figure; plot(id); grid
+figure; plot(id); grid; title('IDENTIFICATION DATA')
 [PED,MAXNR]=pexcit(id) %to check the degree of persistent excitation of the input   
 
 cv=data_detrend(2601:4100) %cross-validation data
-figure; plot(cv); grid
+figure; plot(cv); grid; title('CROSS-VALIDATION DATA')
  
 v=data_detrend(4851:6350) %validation data
-figure; plot(v); grid 
+figure; plot(v); grid; title('VALIDATION DATA') 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %MODEL IDENTIFICATION
@@ -111,7 +111,7 @@ J(15)=sum(e45'*e45) %performance index
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %CROSS-VALIDATION
 %The best performance index is J(8)=3.3198*10^4 --> BEST MODEL: M14
-%Delay: -0.0715s
+%Delay: 0.0715s
 %Np=4 - Nz=1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
