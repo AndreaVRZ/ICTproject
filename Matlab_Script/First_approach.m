@@ -123,3 +123,5 @@ vect_t=(1:v.N)'*v.Ts;
 shadedplot(vect_t,v.y,simc(M14,v));
 xlabel('t [s]')
 axis([0 58 -60 50])
+%--------------------------------------------------------------------------
+figure; bode(M14); grid %Bode diagram of best identified model
